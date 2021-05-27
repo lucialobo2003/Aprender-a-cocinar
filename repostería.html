@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Inicio</title>
+    <link rel="stylesheet" href="mi.css">
+  </head>
+
+  <body>
+
+      
+     
+   <div class="cabecera">
+     <div class="container">
+        <div class="mySlides">
+          <div class="numbertext">1 / 6</div>
+          <img src="img/chocolate.jpg" style="width:100%">
+        </div>
+
+        <div class="mySlides">
+          <div class="numbertext">2 / 6</div>
+          <img src="img/cupcake.jpg" style="width:100%">
+        </div>
+
+        <div class="mySlides">
+          <div class="numbertext">3 / 6</div>
+          <img src="img/Macarons.jpg" style="width:100%">
+        </div>
+          
+        <div class="mySlides">
+          <div class="numbertext">4 / 6</div>
+          <img src="img/TARTA.jpg" style="width:100%">
+        </div>
+
+        <div class="mySlides">
+          <div class="numbertext">5 / 6</div>
+          <img src="img/tartaqueso.jpg" style="width:100%">
+        </div>
+          
+        <div class="mySlides">
+          <div class="numbertext">6 / 6</div>
+          <img src="img/crepes.jpg" style="width:100%">
+        </div>
+          
+        <a class="prev" onclick="plusSlides(-1)">❮</a>
+        <a class="next" onclick="plusSlides(1)">❯</a>
+
+        <div class="caption-container">
+          <p id="caption"></p>
+        </div>
+
+        <div class="row">
+          <div class="column">
+            <img class="demo cursor" src="img/chocolate.jpg" style="width:100%" onclick="currentSlide(1)" alt="Tarta de chocolate">
+          </div>
+          <div class="column">
+            <img class="demo cursor" src="img/cupcake.jpg" style="width:100%" onclick="currentSlide(2)" alt="CUPCAKE">
+          </div>
+          <div class="column">
+            <img class="demo cursor" src="img/Macarons.jpg" style="width:100%" onclick="currentSlide(3)" alt="Macarons">
+          </div>
+          <div class="column">
+            <img class="demo cursor" src="img/TARTA.jpg" style="width:100%" onclick="currentSlide(4)" alt="TARTA ">
+          </div>
+          <div class="column">
+            <img class="demo cursor" src="img/tartaqueso.jpg" style="width:100%" onclick="currentSlide(5)" alt="Tarta de queso">
+          </div>    
+          <div class="column">
+            <img class="demo cursor" src="img/crepes.jpg" style="width:100%" onclick="currentSlide(6)" alt="CREPES">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="navbar">
+      <a href="index.html">Home</a>
+      <a href="repostería.html">Repostería </a>
+      <div class="dropdown">
+        <button class="dropbtn">Comida
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content">
+          <div class="header">
+            <h2> Menu</h2>
+          </div>
+          <div class="row">
+            <div class="column">
+              <h3>Entrantes</h3>
+              <a href="tosta.html">Tostas de sobrasada y queso de cabra</a>
+              <a href="crujientedequeso.html">Crujiente de queso</a>
+              
+            </div>
+            <div class="column">
+              <h3>Platos principales</h3>
+              <a href="Cordero.html">Cordero</a>
+              <a href="pasta.html">Pasta con queso</a>
+            </div>
+          </div>
+        </div>      
+      </div>
+    </div>
+
+
+    <div class="columnas">
+      <div class="row">
+        <div class="column" style="background-color:#edd7e8;">
+          <h2>Tarta de Oreo</h2>
+          <p>
+            <a href=file:///C:/Users/2%C2%BA%20BACH%20TIC/Desktop/Proyecto%20final/tarta.html >RECETA</a>
+          </p>
+          
+          <img src="img/Oreo.jpg" style="float:center;width:200px;height:200px;">
+        </div>
+        <div class="column" style="background-color:#f3c7e8;">
+          <h2>Cupcake</h2>
+           <p><a href= <p>
+            <a href=file:///C:/Users/2%C2%BA%20BACH%20TIC/Desktop/Proyecto%20final/cupcake.html>RECETA</a>
+            </p>
+            <img src="img/13.jpg" style="float:center;width:200px;height:200px;">
+
+
+        </div>
+        <div class="column" style="background-color: #ec81d2;">
+          <h2>Crepes</h2>
+          <p><a href=file:///C:/Users/2%C2%BA%20BACH%20TIC/Desktop/Proyecto%20final/crepes.html>RECETA</a>
+            </p>
+             <img src="img/crepes.jpg" style="float:center;width:200px;height:200px;">
+
+
+        </div>
+      </div>
+    </div>
+
+  <script>
+      var slideIndex = 1;
+      showSlides(slideIndex);
+
+      function plusSlides(n) {
+        showSlides(slideIndex += n);
+      }
+
+      function currentSlide(n) {
+        showSlides(slideIndex = n);
+      }
+
+      function showSlides(n) {
+        var i;
+        var slides = document.getElementsByClassName("mySlides");
+        var dots = document.getElementsByClassName("demo");
+        var captionText = document.getElementById("caption");
+        if (n > slides.length) {slideIndex = 1}
+        if (n < 1) {slideIndex = slides.length}
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex-1].style.display = "block";
+        dots[slideIndex-1].className += " active";
+        captionText.innerHTML = dots[slideIndex-1].alt;
+      }
+      </script>
+    
+</body>
+</html>
+
+
+
